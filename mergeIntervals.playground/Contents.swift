@@ -26,9 +26,4 @@ class Solution {
 let sol = Solution()
 print(sol.merge([[1,3], [2,6], [15,18], [8, 10]]))
 
-
 var intervals = [[1,3], [2,6], [2,5], [15,18], [8, 10]]
-intervals.sort { $0[0] < $1[0]}
-//intervals.dropLast()
-intervals.removeLast()
-print(intervals)
