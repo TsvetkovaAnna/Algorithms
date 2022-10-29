@@ -14,6 +14,7 @@ public class TreeNode {
     }
 }
 
+//first solution
 func isBalanced(_ root: TreeNode?) -> Bool {
     print("Root \(root?.val ?? -1)")
     if root == nil {
@@ -39,7 +40,7 @@ let node = TreeNode(3, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7, nil, 
 isBalanced(node)
 
 
-
+//second solution
 class Solution {
     func isBalanced(_ root: TreeNode?) -> Bool {
         if root == nil {
@@ -58,7 +59,7 @@ class Solution {
     }
 }
 
-
+//third solution
 class Solution3 {
     func isBalanced(_ root: TreeNode?) -> Bool {
         if root == nil {
