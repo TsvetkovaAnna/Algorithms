@@ -6,9 +6,8 @@ class Solution {
         
         var left = 0
         var right = nums.count - 1
-        //var mid = (left + right)/2
         if nums[left] > nums[right] {
-            while left < right /*&& mid > 0*/ {
+            while left < right {
                 let mid = (left + right)/2
                 if nums[mid] > nums[mid + 1] {
                     min = nums[mid + 1]
