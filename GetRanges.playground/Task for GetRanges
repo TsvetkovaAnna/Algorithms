@@ -1,0 +1,3 @@
+Given an array of Int, return array of ranges(also array)
+
+Example: [3,5,4,1,2,7,8] -> [[1, 5], [7, 8]]
