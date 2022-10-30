@@ -14,7 +14,31 @@ public class TreeNode {
     }
 }
 
-class Solution {
+class Solution2 { //shorter algorithm
+    var treeSet:Set<Int> = []
+    func findTarget(_ root: TreeNode?, _ k: Int) -> Bool {
+
+        guard let root = root else { return false }
+        
+        if treeSet.contains(root.val) {
+            return true
+        }
+        
+        treeSet.insert(k - root.val)
+        
+        var leftBool = false
+        var rightBool = false
+        if let left = root.left {
+            leftBool = findTarget(left, k)
+        }
+        if let right = root.right {
+            rightBool = findTarget(right, k)
+        }
+        return (leftBool || rightBool)
+    }
+}
+
+class Solution { //longer algorithm
     
     var treeSet:Set<Int> = []
     func findTarget(_ root: TreeNode?, _ k: Int) -> Bool {
@@ -50,6 +74,7 @@ class Solution {
         return diff
     }
 }
+
 let node = TreeNode(3, TreeNode(9, TreeNode(13, TreeNode(13), nil), nil), TreeNode(20, TreeNode(15), TreeNode(7, nil, TreeNode(10, TreeNode(11), nil))))
 let sol = Solution()
 sol.findTarget(node, 34)
